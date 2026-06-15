@@ -128,10 +128,7 @@ async def predict_realtime(
         "outputSettings": {
             "type": "localFile",
         },
-        "predictionsStartDate": forecast_range_start.strip(),
-        "predictionsEndDate": forecast_range_end.strip(),
         "includeProbabilities": False,
-        "includePredictionIntervals": False,
     }
 
     async with httpx.AsyncClient(timeout=600.0) as client:
