@@ -22,7 +22,7 @@ with open(csv_file, "rb") as f:
         f"{endpoint}/datasets/fromFile/",
         headers=headers,
         files={"file": (csv_file, f, "text/csv")},
-        data={"doSnapshot": True},
+
     )
 
 if resp.status_code in (200, 201, 202):
